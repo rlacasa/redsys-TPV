@@ -305,7 +305,7 @@ class Tpv
 
         if (($len < 4) || ($len > 12)) {
             throw new Exception('Order code must have more than 4 digits and less than 12');
-        } elseif (!preg_match('/^[0-9]{2}[0-9a-zA-Z]{0,8}$/', $order)) {
+        } elseif (!preg_match('/^[0-9]{2}[0-9a-zA-Z]{0,10}$/', $order)) {
             throw new Exception('First four order digits must be numbers and then only are allowed numbers and letters');
         }
 
